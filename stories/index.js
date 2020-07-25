@@ -1,126 +1,129 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import MovieCard from "../src/components/movieCard";
+import VenueCard from "../src/components/venueCard";
 import FilterControls from "../src/components/filterControls";
-import MoviesHeader from "../src/components/headerMovieList";
-import MovieList from "../src/components/movieList";
-import MovieDetails from "../src/components/movieDetails";
-import MovieHeader from "../src/components/headerMovie";
+import VenuesHeader from "../src/components/headerVenueList";
+import VenueList from "../src/components/venueList";
+import VenueDetails from "../src/components/venueDetails";
+import VenueHeader from "../src/components/headerVenue";
 import AddFavoriteButton from "../src/components/buttons/addToFavorites";
 import { MemoryRouter } from "react-router";
-import GenresContextProvider from "../src/contexts/genresContext";
+import CategoriesContextProvider from "../src/contexts/categoriesContext";
 import { action } from "@storybook/addon-actions";
-import MovieReviews from "../src/components/movieReviews";
-import MovieReview from "../src/components/movieReview";
+import VenueTips from "../src/components/venueTips";
+import VenueTip from "../src/components/venueTip";
 
 const sample = {
-  adult: false,
-  backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
-  belongs_to_collection: {
-    id: 10,
-    name: "Star Wars Collection",
-    poster_path: "/iTQHKziZy9pAAY4hHEDCGPaOvFC.jpg",
-    backdrop_path: "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"
-  },
-  budget: 200000000,
-  genres: [
-    {
-      id: 14,
-      name: "Fantasy"
+    id: "4ba0f4d9f964a520fe8937e3",
+    name: "Philharmonie Luxembourg",
+    location: {
+      address: "1, place de l’Europe",
+      lat: 49.61896265363153,
+      lng: 6.141746622671367,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 49.61896265363153,
+          lng: 6.141746622671367
+        }
+      ],
+      postalCode: "L-1499",
+      cc: "LU",
+      city: "Kirchberg",
+      state: "District de Luxembourg",
+      country: "Luxembourg",
+      formattedAddress: [
+        "1, place de l’Europe",
+        "L-1499 Kirchberg",
+        "Luxembourg"
+        ]
     },
-    {
-      id: 12,
-      name: "Adventure"
+    categories: [
+      {
+        id: "5032792091d4c4b30a586d5c",
+        name: "Concert Hall",
+        pluralName: "Concert Halls",
+        shortName: "Concert Hall",
+        icon: {
+          prefix: "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+          suffix: ".png"
+        },
+        primary: true
+      }
+      ],
+    photos: {
+        count: 0,
+        groups: [ ]
     },
-    {
-      id: 878,
-      name: "Science Fiction"
+    referralId: "e-0-4ba0f4d9f964a520fe8937e3-2",
+  };
+
+const sampleTip = {
+
+    id: "5150464ee4b02f70eb28eee4",
+    createdAt: 1364215374,
+    text: "Did you know? To create that feeling of being in the countryside, and not in the middle of a city, the four Transverse Roads were sunken down eight feet below the park’s surface.",
+    type: "user",
+    canonicalUrl: "https://foursquare.com/item/5150464ee4b02f70eb28eee4",
+    photo: {
+    id: "5150464f52625adbe29d04c2",
+    createdAt: 1364215375,
+    source: {
+    name: "Foursquare Web",
+    url: "https://foursquare.com"
     },
+    prefix: "https://fastly.4sqi.net/img/general/",
+    suffix: "/13764780_Ao02DfJpgG1ar2PfgP51hOKWsn38iai8bsSpzKd0GcM.jpg",
+    width: 800,
+    height: 542,
+    visibility: "public"
+    },
+    photourl: "https://fastly.4sqi.net/img/general/original/13764780_Ao02DfJpgG1ar2PfgP51hOKWsn38iai8bsSpzKd0GcM.jpg",
+    likes: {
+    count: 246,
+    groups: [
     {
-      id: 28,
-      name: "Action"
+    type: "others",
+    count: 246,
+    items: [ ]
     }
-  ],
-  homepage:
-    "https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi",
-  id: 181808,
-  imdb_id: "tt2527336",
-  original_language: "en",
-  original_title: "Star Wars: The Last Jedi",
-  overview:
-    "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
-  popularity: 44.208,
-  poster_path: "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
-  production_companies: [
-    {
-      id: 1,
-      logo_path: "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
-      name: "Lucasfilm",
-      origin_country: "US"
+    ],
+    summary: "246 likes"
     },
-    {
-      id: 11092,
-      logo_path: null,
-      name: "Ram Bergman Productions",
-      origin_country: "US"
+    logView: true,
+    agreeCount: 246,
+    disagreeCount: 0,
+    todo: {
+    count: 30
     },
-    {
-      id: 2,
-      logo_path: "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
-      name: "Walt Disney Pictures",
-      origin_country: "US"
+    user: {
+    id: "13764780",
+    firstName: "City of New York",
+    photo: {
+    prefix: "https://fastly.4sqi.net/img/user/",
+    suffix: "/2X1FKJPUY3DGRRK3.png"
+    },
+    type: "page"
     }
-  ],
-  production_countries: [
-    {
-      iso_3166_1: "US",
-      name: "United States of America"
-    }
-  ],
-  release_date: "2017-12-13",
-  revenue: 1332459537,
-  runtime: 152,
-  spoken_languages: [
-    {
-      iso_639_1: "en",
-      name: "English"
-    }
-  ],
-  status: "Released",
-  tagline: "Darkness rises... and light to meet it",
-  title: "Star Wars: The Last Jedi",
-  video: false,
-  vote_average: 7,
-  vote_count: 9692,
+    };
 
-};
-
-const sampleReview = {
-
-id:"5a3d22cd0e0a264cbe2375e7",
-author:"Weedinator",
-content:"I got so high before going in to see \"The Last Jedi\" it's a wonder I figured out how to get into the theater. We started rocking the shatter bong hardcore, just pump it, pump it, till you can actually feel your brain melting, then hit that nail and do it again and again. At some point somebody asked the question \"where are we?\" and while I was reflecting philosophically on the matter, somebody else pointed out that we were parked in a lot by the cineplex and we slowly realized that we were here to see 'The Last Jedi'! I could barely function at all, so I went to my old go-to routine of donning dark glasses and a white cane to help disguise my complete stonification by pretending I was just some poor blind guy stumbling around and knocking things over. I usually do this to get past security at rock concerts and it never crossed my mind that a blind guy wouldn't be able to see a movie in the first place, but it worked anyway and soon enough we were in our seats. There were these fucking kids sitting right behind us and they kept kicking my seat like little retards, kicking, kicking, kicking.... so I took the lid off my extra-large Coke and just tossed it over my shoulder. Bingo! Direct hit! The little creeps shuffled off all pissed and whining, covered in sticky cola, us laughing at them, calling them losers, it was great! \r\n\r\nThen the movie started. The sound was awesome and everything but the screen was pretty freakin' dark I thought, could hardly make out anything. I started chanting \"Turn up the brightness! Turn up the brightness!\", expecting the rest of the audience to join in to my righteous chant of outrage, but then I realized I still had my Blind Guy Glasses on. Took 'em off and yup, cleared right up. There was some kind of big space battle going on so we took out our vape pens and started hoofing back lungfuls of sweet sweet shatter vapor. My girlfriend started texting me, bitching at me to pick her up some vag pads on the way home. WTF?? Get up off your fat ass and get 'em yourself I texted back. A barrage of bitchtexts followed, I was a jerk, I was an asshole and bla bla bla... I took a picture of my bare ass and sent it to her as a reply, fuckin bitch, anyway, apparently, this was considered 'indecent exposure' according to the usher-dork who wouldn't shut up about it so we had to leave the movie. We saw those stupid kids in the lobby as we were being escorted out, laughing at US, calling US 'losers'... I wanted to get back at them when they came out, even formed this elaborate plan where we would swoop down on them and soak them with freezing water this time, but we ended up just getting high again then went to Burger King.",
-url:"https://www.themoviedb.org/review/5a3d22cd0e0a264cbe2375e7",
-
-};
-
-storiesOf("Home Page/MovieCard", module)
+storiesOf("Home Page/VenueCard", module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
   .add("default", () => (
-    <MovieCard
-      movie={sample}
-      action={movie => <button className="btn w-100 btn-primary">Test</button>}
+    <VenueCard
+      venue={sample}
+      action={venue => <button className="btn w-100 btn-primary">Test</button>}
     />
   ))
   .add("exception", () => {
     const sampleNoPoster = { ...sample, poster_path: undefined };
     return (
-      <MovieCard
-        movie={sampleNoPoster}
-        action={movie => (
+      <VenueCard
+        venue={sampleNoPoster}
+        action={venue => (
           <button className="btn w-100 btn-primary">Test</button>
         )}
       />
@@ -129,45 +132,45 @@ storiesOf("Home Page/MovieCard", module)
 
 storiesOf("Home Page/FilterControls", module)
   .addDecorator(story => (
-    <GenresContextProvider>{story()}</GenresContextProvider>
+    <CategoriesContextProvider>{story()}</CategoriesContextProvider>
   ))
   .add("default", () => (
-    <FilterControls onUserInput={action("button-click")} numMovies={10} />
+    <FilterControls onUserInput={action("button-click")} numVenues={10} />
   ));
 
 storiesOf("Home Page/Header", module).add("default", () => (
-  <MoviesHeader title="All Movies" numMovies={10} />
+  <VenuesHeader title="All Venues" numVenues={10} />
 ));
 
-storiesOf("Home Page/MovieList", module)
+storiesOf("Home Page/VenueList", module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
   .add("default", () => {
-    const movies = [sample, sample, sample, sample, sample];
+    const venues = [sample, sample, sample, sample, sample];
     return (
-      <MovieList
-        movies={movies}
-        action={movie => (
+      <VenueList
+        venues={venues}
+        action={venue => (
           <button className="btn w-100 btn-primary">Test</button>
         )}
       />
     );
   });
 
-storiesOf("Movie Details Page/MovieDetails", module).add("default", () => (
-  <MovieDetails movie={sample} />
+storiesOf("Venue Details Page/VenueDetails", module).add("default", () => (
+  <VenueDetails venue={sample} />
 ));
 
-storiesOf("Movie Details Page/MovieHeader", module)
+storiesOf("Venue Details Page/VenueHeader", module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
-  .add("default", () => <MovieHeader movie={sample} />);
+  .add("default", () => <VenueHeader venue={sample} />);
 
 
 
-storiesOf("Movie Review Page/MovieReview", module).add("default", () => (
-  <MovieReview review={sampleReview} />
+storiesOf("Venue Tip Page/VenueTip", module).add("default", () => (
+  <VenueTip tip={sampleTip} />
 ));
 

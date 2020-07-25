@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
-import PageTemplate from '../components/templateMovieListPage'
-import {MoviesContext} from '../contexts/moviesContext'
+import PageTemplate from '../components/templateVenueListPage'
+import {VenuesContext} from '../contexts/venuesContext'
 import AddToFavoritesButton from '../components/buttons/addToFavorites'
 
-const MovieListPage = () => {
-  const context = useContext(MoviesContext);
+const VenueListPage = () => {
+  const context = useContext(VenuesContext);
 
   return (
       <PageTemplate 
-        title='All Movies'
-        movies={context.movies}
-        action={movie => <AddToFavoritesButton movie={movie} /> }
+        title='All Venues'
+        venues={context.venues}
+        action={venue => <AddToFavoritesButton venue={venue} /> }
       />
   );
 };
 
-export default MovieListPage;
+export default VenueListPage;

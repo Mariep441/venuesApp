@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
-import MoviePage from './pages/movieDetailsPage';
-import FavoriteMoviesPage from './pages/favoritesMoviesPage';
-import MovieReviewPage from "./pages/movieReviewPage";
+import VenuePage from './pages/venueDetailsPage';
+import FavoriteVenuesPage from './pages/favoritesVenuesPage';
+import VenueTipPage from "./pages/venueTipPage";
 import SiteHeader from './components/siteHeader';
-import MoviesContextProvider from "./contexts/moviesContext";
-import GenresContextProvider from "./contexts/genresContext";
-import AddMovieReviewPage from './pages/addMovieReviewPage';
+import VenuesContextProvider from "./contexts/venuesContext";
+import CategoriesContextProvider from "./contexts/categoriesContext";
+import AddVenueTipPage from './pages/addVenueTipPage';
 
 const App = () => {
     return (
@@ -17,18 +17,18 @@ const App = () => {
       <div className="jumbotron">
       <SiteHeader /> 
         <div className="container-fluid">
-          <MoviesContextProvider>
-            <GenresContextProvider> 
+          <VenuesContextProvider>
+            <CategoriesContextProvider> 
               <Switch>
-                <Route exact path="/reviews/form" component={AddMovieReviewPage} />   
-                <Route path="/reviews/:id" component={MovieReviewPage} /> 
-                <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-                <Route path="/movies/:id" component={MoviePage} />
+                <Route exact path="/tips/form" component={AddVenueTipPage} />   
+                <Route path="/tips/:id" component={VenueTipPage} /> 
+                <Route exact path="/venues/favorites" component={FavoriteVenuesPage} />
+                <Route path="/venues/:id" component={VenuePage} />
                 <Route path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>
-            </GenresContextProvider>
-          </MoviesContextProvider>
+            </CategoriesContextProvider>
+          </VenuesContextProvider>
         </div>
       </div>
     </BrowserRouter>

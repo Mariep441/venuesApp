@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import {MoviesContext} from "../../contexts/moviesContext";
+import {VenuesContext} from "../../contexts/venuesContext";
 
-const AddToFavoriteButton = ({ movie }) => {
-  const context = useContext(MoviesContext);
+const AddToFavoriteButton = ({ venue }) => {
+  const context = useContext(VenuesContext);
 
   const handleAddToFavorite = e => {
     e.preventDefault();
-    context.addToFavorites(movie.id);
+    context.addToFavorites(venue.id);
   };
   return (
     <button

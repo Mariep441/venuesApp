@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./filterControls.css";
-import { GenresContext } from '../../contexts/genresContext' 
+import { CategoriesContext } from '../../contexts/categoriesContext' 
 
 const FilterControls = props => {
-  const context = useContext(GenresContext);
+  const context = useContext(CategoriesContext);
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
@@ -12,8 +12,8 @@ const FilterControls = props => {
   const handleTextChange = e => {
     handleChange(e, "name", e.target.value);
   };
-  const handleGenreChange = e => {
-    handleChange(e, "genre", e.target.value);
+  const handleCategoryChange = e => {
+    handleChange(e, "category", e.target.value);
   };
 
   return (
@@ -26,12 +26,12 @@ const FilterControls = props => {
             placeholder="Title Search"
             onChange={handleTextChange}
           />
-          <span>Genre:</span>
-          <select id="genre" onChange={handleGenreChange}>
-            {context.genres.map(genre => {
+          <span>Category:</span>
+          <select id="category" onChange={handleCategoryChange}>
+            {context.categories.map(category => {
               return (
-                <option key={genre.id} value={genre.id}>
-                  {genre.name}
+                <option key={category.id} value={category.id}>
+                  {category.name}
                 </option>
               );
             })}
