@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./filterControls.css";
 import { CategoriesContext } from '../../contexts/categoriesContext' 
 
+
 const FilterControls = props => {
   const context = useContext(CategoriesContext);
 
@@ -16,10 +17,15 @@ const FilterControls = props => {
     handleChange(e, "category", e.target.value);
   };
 
+  const handleSubCategoryChange = e => {
+    handleChange(e, "subCategory", e.target.value);
+  };
+
+ 
   return (
-    <div className="row bg-warning">
-      <div className="col-md-12">
-        <h4>
+    <div className="row bg-secondary">
+      <div className="col-md-15">
+        <h5>
           <span>List Filtering:</span>
           <input
             type="text"
@@ -36,7 +42,18 @@ const FilterControls = props => {
               );
             })}
           </select>
-        </h4>
+
+          <span>SubCategory:</span>
+          <select id="subCategory" onChange={handleSubCategoryChange}>
+            {context.categories.map(category => {
+              return (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              );
+            })}
+          </select>
+        </h5>
       </div>
     </div>
   );

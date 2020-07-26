@@ -9,20 +9,20 @@ const SiteHeader = () => {
     <nav className="navbar  navbar-light fixed-top  bg-dark ">
       <nav className="navbar-brand text-white">
         <Link className=" text-white" to="/">
-          TMDB Client
+          FourSquare Client
         </Link>
       </nav>
       <FontAwesomeIcon
         className="navbar-text text-light"
-        icon={["fas", "video"]}
+        icon={["fas", "suitcase"]}
         size="3x"
       />
       <span className="navbar-text text-light">
-        For the movie enthusiast !!
+        For the travel enthusiast !!
       </span>
       <FontAwesomeIcon
         className="navbar-text text-light"
-        icon={["fas", "film"]}
+        icon={["fas", "globe-europe"]}
         size="3x"
       />
       <nav className="navbar navbar-expand ">
@@ -33,8 +33,13 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
+            <Link className="nav-link text-white" to="/venues/favorites">
               Favorites
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/map">
+              Map
             </Link>
           </li>
         </ul>

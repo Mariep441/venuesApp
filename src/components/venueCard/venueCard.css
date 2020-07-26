@@ -8,6 +8,7 @@
 p {
   margin-top: 1px;
   margin-bottom: 1px;
+  text-align: center
 }
 
 .card-body {
@@ -16,5 +17,9 @@ p {
 }
 
 .card-title {
+  text-align: center
+}
+
+h6 {
   text-align: center
 }

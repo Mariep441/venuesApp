@@ -4,7 +4,8 @@ import { getCategories } from "../api/foursquare-api";
 export const CategoriesContext = createContext(null)
 
 const CategoriesContextProvider = props => {
-    const [categories, setCategories] = useState([{ id: "0", name: "All"}]);
+    
+  const [categories, setCategories] = useState([{ id: "0", name: "All"}]);
     useEffect(() => {
       getCategories().then(allCategories => {
         setCategories([categories[0], ...allCategories]);
@@ -12,15 +13,26 @@ const CategoriesContextProvider = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+  const [subCategories, setSubCategories] = useState([{ id: "0", name: "Library"}]);
+    useEffect(() => {
+      getCategories(categories).then(subCategories => {
+        setSubCategories([categories[0], ...subCategories]);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+
+
     return (
         <CategoriesContext.Provider
           value={{
-            categories
+            categories, subCategories
           }}
         >
           {props.children}
         </CategoriesContext.Provider>    
     )
 }
+
 
 export default CategoriesContextProvider;

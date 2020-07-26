@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
+import MapPage from "./pages/mapPage";
 import VenuePage from './pages/venueDetailsPage';
 import FavoriteVenuesPage from './pages/favoritesVenuesPage';
 import VenueTipPage from "./pages/venueTipPage";
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/tips/:id" component={VenueTipPage} /> 
                 <Route exact path="/venues/favorites" component={FavoriteVenuesPage} />
                 <Route path="/venues/:id" component={VenuePage} />
+                <Route path="/map" component={MapPage} />
                 <Route path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>

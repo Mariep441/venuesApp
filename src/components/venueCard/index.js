@@ -10,17 +10,20 @@ const VenueCard = ({venue, action}) => {
     <div className="col-sm-3">
       <div className="card  bg-white">
       <Link to={`/venues/${venue.id}`}>
-
+      <h4 className="card-title ">{venue.name}</h4>
         </Link>
         <div className="card-body">
-          <h4 className="card-title ">{venue.name}</h4>
+          <h6>
+          <span> {venue.categories[0].name}</span>
+          </h6>
           <p>
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <span> {venue.categories[0].name}</span>
+            <span> {venue.location.address}</span>
           </p>
           <p>
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <span> {venue.name}</span>
+            <span> {venue.location.city}</span>
+          </p>
+          <p>
+            <span> {venue.location.country}</span>
           </p>
         </div>
         <div className="card-footer">
