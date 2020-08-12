@@ -5,7 +5,7 @@ export default ({ venue }) => {
   return (
     <>
       <h4>Location</h4>
-      <p>{venue.formattedAddress}</p>
+      <p>{venue.location.formattedAddress}</p>
       <ul className="list-group list-group-horizontal">
         <li key="ruh" className="list-group-item list-group-item-dark">
           Latitude

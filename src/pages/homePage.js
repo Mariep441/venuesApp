@@ -8,7 +8,7 @@ const VenueListPage = () => {
 
   return (
       <PageTemplate 
-        title='All Venues'
+        name='All Venues'
         venues={context.venues}
         action={venue => <AddToFavoritesButton venue={venue} /> }
       />

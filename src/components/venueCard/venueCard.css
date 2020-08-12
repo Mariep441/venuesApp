@@ -6,14 +6,14 @@
   }
 
 p {
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center
 }
 
 .card-body {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .card-title {

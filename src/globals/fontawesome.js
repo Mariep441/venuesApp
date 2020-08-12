@@ -7,7 +7,8 @@ import {
   faCalendar,
   faArrowCircleLeft,
   faGlobeEurope,
-  faSuitcase
+  faSuitcase,
+  faMapMarker
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add( faStar, faFilm, faVideo, faHome, faCalendar, faArrowCircleLeft, faGlobeEurope, faSuitcase);
+library.add( faStar, faFilm, faVideo, faHome, faCalendar, faArrowCircleLeft, faGlobeEurope, faSuitcase, faMapMarker);

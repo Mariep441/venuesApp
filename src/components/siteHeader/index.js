@@ -38,7 +38,7 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/map">
+            <Link className="nav-link text-white" to="/mapView">
               Map
             </Link>
           </li>

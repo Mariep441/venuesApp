@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
-import PageTemplate from '../components/templateVenueListPage'
+import PageTemplate from '../components/templateVenueMapPage'
 import {VenuesContext} from '../contexts/venuesContext'
 import AddToFavoritesButton from '../components/buttons/addToFavorites'
-import Map from '../components/map'
-
 
 const MapPage = () => {
   const context = useContext(VenuesContext);
 
   return (
-      <Map 
-        title='All Venues'
-      />
+    <PageTemplate
+      name='All Venues'
+      venues={context.venues}
+      action={venue => <AddToFavoritesButton venue={venue} /> }
+    />
   );
 };
 

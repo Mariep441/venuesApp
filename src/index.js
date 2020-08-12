@@ -25,7 +25,7 @@ const App = () => {
                 <Route path="/tips/:id" component={VenueTipPage} /> 
                 <Route exact path="/venues/favorites" component={FavoriteVenuesPage} />
                 <Route path="/venues/:id" component={VenuePage} />
-                <Route path="/map" component={MapPage} />
+                <Route path="/mapView" component={MapPage} />
                 <Route path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>

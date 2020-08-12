@@ -1,0 +1,50 @@
+{
+    "venues": [
+        {
+            "id": "4ba0f4d9f964a520fe8937e3",
+            "name": "Philharmonie Luxembourg",
+            "location": {
+              "address": "1, place de l’Europe",
+              "lat": 49.61896265363153,
+              "lng": 6.141746622671367,
+              "labeledLatLngs": [
+                {
+                  "label": "display",
+                  "lat": 49.61896265363153,
+                  "lng": 6.141746622671367
+                }
+              ],
+              "postalCode": "L-1499",
+              "cc": "LU",
+              "city": "Kirchberg",
+              "state": "District de Luxembourg",
+              "country": "Luxembourg",
+              "formattedAddress": [
+                "1, place de l’Europe",
+                "L-1499 Kirchberg",
+                "Luxembourg"
+                ]
+            },
+            "categories": [
+              {
+                "id": "5032792091d4c4b30a586d5c",
+                "name": "Concert Hall",
+                "pluralName": "Concert Halls",
+                "shortName": "Concert Hall",
+                "icon": {
+                  "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+                  "suffix": ".png"
+                },
+                "primary": true
+              }
+              ],
+            "photos": {
+                "count": 0,
+                "groups": [ ]
+            },
+            "referralId": "e-0-4ba0f4d9f964a520fe8937e3-2"
+          }
+        
+
+    ]
+}
