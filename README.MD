@@ -1,6 +1,6 @@
 # Project - ReactJS app.
 
-Name: ... your name ...
+Name: Marie-Pierre Beaudoin
 
 ## Overview.
 ...... Insert a statement of the app concept and objectives. For an expansion of the Movies Fan app, only state the additional objectives .........
@@ -66,6 +66,8 @@ Name: ... your name ...
 ## Independent learning.
 
 . . . . . Briefly state the technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include source material references (articles/blogs) ......... 
+
+https://dev.to/vic3king/building-a-spa-with-react-and-okta-for-authentication-4m85
 
 
 [model]: ./data.jpg

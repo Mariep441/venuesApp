@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { getCategories } from "../api/foursquare-api";
+import { getSubCategories } from "../api/foursquare-api";
 
 export const CategoriesContext = createContext(null)
 
@@ -15,7 +16,7 @@ const CategoriesContextProvider = props => {
 
   const [subCategories, setSubCategories] = useState([{ id: "0", name: "Library"}]);
     useEffect(() => {
-      getCategories(categories).then(subCategories => {
+      getCategories(categories.categories).then(subCategories => {
         setSubCategories([categories[0], ...subCategories]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

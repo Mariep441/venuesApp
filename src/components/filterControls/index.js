@@ -18,7 +18,7 @@ const FilterControls = props => {
   };
 
   const handleSubCategoryChange = e => {
-    handleChange(e, "subCategory", e.target.value);
+    handleChange(e, "category", e.target.value);
   };
 
  
@@ -45,7 +45,7 @@ const FilterControls = props => {
 
           <span>SubCategory:</span>
           <select id="subCategory" onChange={handleSubCategoryChange}>
-            {context.categories.map(category => {
+            {context.subCategories.map(category => {
               return (
                 <option key={category.id} value={category.id}>
                   {category.name}

@@ -14,6 +14,14 @@
       .then(res => res.json())
       .then(data => data.response.venue);
   };
+
+  export const getVenuePhotos = id => {
+    return fetch(
+      `https://api.foursquare.com/v2/venues/${id}?&photos&client_id=VXBG35UAZ2DLVD5VTXEWVDLMKKEVIHRUN5G3PV4LLVEILNGC&client_secret=LYY1KBWYLBMF5HC3CRH0WDXFXUJSN1RYM4AZ5WP0NDGXM1BR&v=20190101`)
+      .then(res => res.json())
+      .then(data => data.response.venue.photos);
+  };
+
   
   export const getCategories = () => {
     return fetch(
@@ -25,10 +33,21 @@
     
   };
 
+  export const getSubCategories = () => {
+    return fetch(
+      'https://api.foursquare.com/v2/venues/categories?&client_id=VXBG35UAZ2DLVD5VTXEWVDLMKKEVIHRUN5G3PV4LLVEILNGC&client_secret=LYY1KBWYLBMF5HC3CRH0WDXFXUJSN1RYM4AZ5WP0NDGXM1BR&v=20190101'
+      )
+
+      .then(res => res.json())
+      .then(data => data.response.categories.categories)
+    
+  };
+
+
 
   export const getVenueTips = id => {
     return fetch(
       `https://api.foursquare.com/v2/venues/${id}?/tips&client_id=VXBG35UAZ2DLVD5VTXEWVDLMKKEVIHRUN5G3PV4LLVEILNGC&client_secret=LYY1KBWYLBMF5HC3CRH0WDXFXUJSN1RYM4AZ5WP0NDGXM1BR&v=20190101`)
       .then(res => res.json())
-      .then(data => data.response.venue);
+      .then(data => data.response.venue.tips.groups);
   };

@@ -1,18 +1,24 @@
 import React, { useContext } from "react";
-import PageTemplate from '../components/templateVenueMapPage'
 import {VenuesContext} from '../contexts/venuesContext'
-import AddToFavoritesButton from '../components/buttons/addToFavorites'
+import { Map, TileLayer } from "react-leaflet";
+import 'leaflet/dist/leaflet.css';
+import Markers from '../components/mapVenueMarkers';
 
-const MapPage = () => {
+const VenueMapPage = () => {
   const context = useContext(VenuesContext);
 
   return (
-    <PageTemplate
-      name='All Venues'
-      venues={context.venues}
-      action={venue => <AddToFavoritesButton venue={venue} /> }
-    />
-  );
-};
+    <div id="map">
+      <Map style={{ height: "90vh" }} center={[49.611637, 6.1302385]} zoom={18}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+       <Markers venues = {context.venues}/> 
 
-export default MapPage;
+      </Map>
+    </div>
+  );
+}
+
+export default VenueMapPage;

@@ -11,35 +11,24 @@ export default ({ venue }) => {
       setTips(tips);
     });
   }, []);
+
+
+console.log(tips);
+
   return (
     <table className="table table-striped table-bordered table-hover">
       <thead>
         <tr>
           <th scope="col">Author</th>
-          <th scope="col">Excerpt</th>
-          <th scope="col">More</th>
+          <th scope="col">Text</th>
         </tr>
       </thead>
       <tbody>
         {tips.map(t => {
             return (
               <tr key={t.id}>
-                <td>{t.user.firstName}</td>
-                <td>{excerpt(t.text)}</td>
-                <td>
-                  {" "}
-                  <Link
-                    to={{
-                      pathname: `/tips/${t.id}`,
-                      state: {
-                        tip: t,
-                        venue: venue
-                      }
-                    }}
-                  >
-                    Full Tip
-                  </Link>
-                </td>
+                <td>{t.items[0].user.firstName}</td>
+                <td>{t.items[0].text}</td>
               </tr>
             );
           })}

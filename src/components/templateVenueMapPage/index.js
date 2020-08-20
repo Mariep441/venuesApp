@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../headerVenueList";
-import MapView from "../mapView";
+import VenueMarkers from "../mapVenueMarkers";
 import FilterControls from "../filterControls";
 
 const VenueMapPageTemplate = ({venues, name, action}) => {
@@ -26,10 +26,10 @@ const VenueMapPageTemplate = ({venues, name, action}) => {
     <>
       <Header name={name} numVenues={displayedVenues.length} />
       <FilterControls onUserInput={handleChange} numVenues={displayedVenues.length}/>
-      <MapView
+      <VenueMarkers
         action={action}
         venues={displayedVenues}
-      ></MapView>
+      ></VenueMarkers>
     </>
   );
 };

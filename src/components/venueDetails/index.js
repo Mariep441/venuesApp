@@ -2,6 +2,9 @@ import React from "react";
 import "./venueDetails.css";
 
 export default ({ venue }) => {
+
+  let cover_photo = venue.bestPhoto.prefix + venue.bestPhoto.width + 'x' + venue.bestPhoto.height + venue.bestPhoto.suffix;
+
   return (
     <>
       <h4>Location</h4>
@@ -32,6 +35,8 @@ export default ({ venue }) => {
         ))}
       </ul>
 
+      <img src = {cover_photo} />
+   
     </>
   );
 };
