@@ -1,18 +1,16 @@
-import React, { useContext } from "react";
-import PageTemplate from '../components/templateVenueListPage'
-import {VenuesContext} from '../contexts/venuesContext'
-import AddToFavoritesButton from '../components/buttons/addToFavorites'
+import React, { useContext,  useState, useEffect } from "react";
+import PageTemplate from '../components/search'
+import StubAPI from "../api/stubAPI";
+import SearchButton from '../components/buttons/addSearch'
 
-const VenueListPage = () => {
-  const context = useContext(VenuesContext);
+const VenueSearchPage = props => {
 
   return (
       <PageTemplate 
-        name='All Venues'
-        venues={context.venues}
-        action={venue => <AddToFavoritesButton venue={venue} /> }
+
+      action={search=> <SearchButton search={search} />}
       />
   );
 };
+export default VenueSearchPage;
 
-export default VenueListPage;

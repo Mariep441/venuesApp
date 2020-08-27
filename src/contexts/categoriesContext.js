@@ -6,7 +6,7 @@ export const CategoriesContext = createContext(null)
 
 const CategoriesContextProvider = props => {
     
-  const [categories, setCategories] = useState([{ id: "0", name: "All"}]);
+  const [categories, setCategories] = useState([{ id: "0", name: "All" }]);
     useEffect(() => {
       getCategories().then(allCategories => {
         setCategories([categories[0], ...allCategories]);
@@ -14,20 +14,21 @@ const CategoriesContextProvider = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-  const [subCategories, setSubCategories] = useState([{ id: "0", name: "Library"}]);
+
+  const [subCategories, setSubCategories] = useState([{ id: "0", name: "All" }]);
     useEffect(() => {
-      getCategories(categories.categories).then(subCategories => {
-        setSubCategories([categories[0], ...subCategories]);
+      getSubCategories().then(allSubCategories => {
+        setSubCategories([subCategories[0], ...allSubCategories]);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
-
     return (
         <CategoriesContext.Provider
           value={{
-            categories, subCategories
+            categories,
+            subCategories
           }}
         >
           {props.children}

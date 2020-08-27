@@ -3,16 +3,15 @@
 Name: Marie-Pierre Beaudoin
 
 ## Overview.
-...... Insert a statement of the app concept and objectives. For an expansion of the Movies Fan app, only state the additional objectives .........
+This is an app based on the Movies app with a twist; It has been refactor to use the FourSquare API.
 
-
-...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
+List of new features
  
- + Feature 1
- + Feature 2
- + Feature 3
- + etc
- + etc
+ + Different Home Page with user inputs to modify the Search
+ + Various Changes into the List of Venues to integrate the new data points
+ + Venues Details with the best photo of each venue
+ + Show latest tip
+ + Leaflet Map with PopUp to visualise each venues
 
 ## Setup requirements.
 
@@ -20,11 +19,19 @@ Name: Marie-Pierre Beaudoin
 
 ## API Data Model.
 
-..... [For projects that did not expand the Movies Fan app] Insert a diagram of API's data model (see example below) AND/OR a sample(s) of the JSON documents returned by its endpoints ........
+All the documentation of the endpoints use in this project are described in the Foursquare Documentation:
+
+https://developer.foursquare.com/docs/places-api/endpoints/
+
+In the stories => index, there are sample of the data return from the queries.
+
+Search for Venues :     GET	venues	search
+Get Venue Categories:   GET	venues	categories
+Get Details of a Venue: GET	venues	details
+Get a Venue’s Tips:     GET	venues	tips
 
 ![][model]
 
-......[For projects that expanded the Movies Fan app] Specify the additional TMDB endpoints used and show sample responses, in JSON .........
 
 ## App Design.
 
@@ -38,7 +45,7 @@ Name: Marie-Pierre Beaudoin
 
 ...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
 
-![][view]
+![][image]
 >Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
 
 ### Routing.
@@ -69,7 +76,9 @@ Name: Marie-Pierre Beaudoin
 
 https://dev.to/vic3king/building-a-spa-with-react-and-okta-for-authentication-4m85
 
+https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef4ecbdcc1b
+
 
 [model]: ./data.jpg
-[view]: ./view.png
+[image]: ./images/travel.png
 [stories]: ./storybook.png

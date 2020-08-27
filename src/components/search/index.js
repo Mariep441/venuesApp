@@ -1,69 +1,71 @@
-import React, { Component, useState  } from 'react';
-import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import 'leaflet/dist/leaflet.css';
-import data from '../../assets/data';
-import Markers from '../mapVenueMarkers';
-import "./mapView.css";
-import React, { useState } from "react";
-import Header from "../headerVenueList";
-import MapView from "../mapView";
-import FilterControls from "../filterControls";
-import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+import React, { useContext, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../globals/fontawesome";
+import "./search.css";
+import "../../images/travel.png";
+import { CategoriesContext } from '../../contexts/categoriesContext';
+import {locations} from '../../assets/data';
+import { Link } from "react-router-dom";
 
-const VenueMapPageTemplate = ({venues, name, action}) => {
-    const [nameFilter, setNameFilter] = useState("");
-    const [categoryFilter, setCategoryFilter] = useState("0");
-    const category = Number(categoryFilter)
-    let displayedVenues = venues
-      .filter(v => {
-        return v.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
-      })
-      .filter(v => {
-        return  category > 0
-          ? v.category_ids.includes(Number(categoryFilter))
-          : true;
-      });
+
+const Search = () => {
+  const context = useContext(CategoriesContext);
   
-    const handleChange = (type, value) => {
-      if (type === "name") setNameFilter(value);
-      else setCategoryFilter(value);
-    };
-
-
-class MapView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        lat: 49,
-        lng: 6.5,
-        zoom: 10};
-    }
-  
-
-  render() {
-    const position = [this.state.lat, this.state.lng];
-
-
-
+  const [category,setCategory]=useState('');
+  const handleSearch=(e)=>{
+    console.log(category);
+    setCategory(e)
+  }
 
 
   return (
-    <>
-      <Header name={name} numVenues={displayedVenues.length} />
-      <FilterControls onUserInput={handleChange} numVenues={displayedVenues.length}/>
-      <div id="map">
-        <Map style={{ height: "75vh" }} center={position} zoom={8}>
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-         <Markers venues={displayedVenues}/> 
-        </Map>
+    <div className="header-form-input-col">
+    
+    <div className="image">
+      <img src={require('../../images/travel.png')} height="700" width="1200" />
+    </div>
+
+    <div className="header-form-input-col">
+    <div className="header-form-input-col">
+      <h5>
+
+        <span>Location:</span>
+        <select id="location" >
+          {locations.map(location => {
+            return (
+              <option key={location.id} value={location.id}>
+                {location.name}
+              </option>
+            );
+          })}
+        </select>
+ 
+
+
+        <span>Category:</span>
+        <select id="category" >
+          {context.categories.map(category => {
+            return (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            );
+          })}
+        </select>
+        
+
+        <span>Let's Go!</span>
+        <Link  to={{pathname:"/list"}}>
+          <button type="button" className="btn w-40 btn-primary"
+          onClick={handleSearch} 
+          >
+            Search
+          </button>
+        </Link>
+        </h5>
       </div>
-    </>
+    </div>
+  </div>
   );
 };
-};
-};
-
-export default VenueMapPageTemplate;
+export default Search;

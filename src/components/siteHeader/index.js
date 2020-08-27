@@ -33,6 +33,11 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link text-white" to="/list">
+              List
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link text-white" to="/venues/favorites">
               Favorites
             </Link>

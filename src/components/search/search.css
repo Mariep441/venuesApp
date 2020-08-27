@@ -1,0 +1,14 @@
+
+img {
+    position: flex;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+   
+  
+  

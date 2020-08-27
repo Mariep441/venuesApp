@@ -7,8 +7,22 @@ export default ({ venue }) => {
 
   return (
     <>
-      <h4>Location</h4>
-      <p>{venue.location.formattedAddress}</p>
+      <ul className="list-group list-group-horizontal">
+        <li key="ruh" className="list-group-item list-group-item-dark">
+        Rating
+        </li>
+        <li key="rut" className="list-group-item ">
+          {venue.rating}
+        </li>
+      </ul>  
+      <ul className="list-group list-group-horizontal">
+        <li key="ruh" className="list-group-item list-group-item-dark">
+        Location
+        </li>
+        <li key="rut" className="list-group-item ">
+          {venue.location.formattedAddress}
+        </li>
+      </ul>  
       <ul className="list-group list-group-horizontal">
         <li key="ruh" className="list-group-item list-group-item-dark">
           Latitude
@@ -35,7 +49,9 @@ export default ({ venue }) => {
         ))}
       </ul>
 
-      <img src = {cover_photo} />
+      <div className="image">
+      <img src={cover_photo} height="350" width="600" />
+    </div>
    
     </>
   );

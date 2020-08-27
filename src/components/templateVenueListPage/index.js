@@ -5,21 +5,21 @@ import FilterControls from "../filterControls";
 
 const VenueListPageTemplate = ({venues, name, action}) => {
   const [nameFilter, setNameFilter] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState("0");
-  const category = Number(categoryFilter)
+  const [subCategoryFilter, setSubCategoryFilter] = useState("0");
+  const subCategory = Number(subCategoryFilter)
   let displayedVenues = venues
     .filter(v => {
       return v.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })
     .filter(v => {
-      return  category > 0
-        ? v.category_ids.includes(Number(categoryFilter))
+      return  subCategory > 0
+        ? v.subCategory_ids.includes(Number(subCategoryFilter))
         : true;
     });
 
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
-    else setCategoryFilter(value);
+    else setSubCategoryFilter(value);
   };
 
   return (

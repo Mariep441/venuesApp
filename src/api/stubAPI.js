@@ -1,14 +1,13 @@
 class StubAPI {
-    constructor() {
-        this.favoriteVenues = [];
+    
+    constructor() {this.search = [];}
+
+    add(category) {
+        this.search.push(category);
     }
 
-    add(venue) {
-        this.favoriteVenues.push(venue);
-    }
-
-    getAll() {
-        return this.favoriteVenues;
+    getCategory() {
+        return this.category;
     }
 }
 

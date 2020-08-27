@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TipButton = ({ venue }) => {
+const SearchButton = () => {
   return (
     <Link
       className="btn w-100 btn-primary "
-      to={{pathname: `/tips/form`,state: {venue: venue}}}
+      to={{pathname: `/list`}}
     >
-      Write a Review
+     
     </Link>
   );
 };
 
-export default TipButton;
+export default SearchButton;
