@@ -55,10 +55,14 @@ I have created stories for:
 
 ### UI Design.
 
-...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
+
+![][Login]
+>Login Page powered by Okta.
 
 ![][homePage]
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
+>Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+
+
 
 ### Routing.
 
@@ -94,4 +98,5 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 [model]: ./model.PNG
 [stories]: ./storybook.PNG
+[Login]: ./Login.PNG
 [homePage]: ./HomePage.PNG
