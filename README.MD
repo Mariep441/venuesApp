@@ -37,7 +37,19 @@ In the stories => index, there are sample of the data return from the queries.
 
 ### Component catalogue.
 
-....... Insert a screenshot from the Storybook UI showing your components' stories. [For projects that expanded the Movies app, hi-light stories relating to new/modified components - see example screenshot below] .......
+In the stories => index, there are sample of the data return from the queries. 
++ sampleVenue
++ sampleTip
++ sampleDetailVenue
+
+I have created stories for:
++ storiesOf("Home Page/VenueCard", module)
++ storiesOf("Home Page/FilterControls", module)
++ storiesOf("Home Page/Header", module)
++ storiesOf("Home Page/VenueList", module)
++ storiesOf("Venue Details Page/VenueDetails", module)
++ storiesOf("Venue Details Page/VenueHeader", module)
++ storiesOf("Venue Tip Page/VenueTip", module)
 
 ![][stories]
 
@@ -45,7 +57,7 @@ In the stories => index, there are sample of the data return from the queries.
 
 ...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
 
-![][image]
+![][homePage]
 >Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
 
 ### Routing.
@@ -81,5 +93,5 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 
 [model]: ./model.PNG
-[image]: ./images/travel.png
 [stories]: ./storybook.png
+[stories]: ./HomePage.png

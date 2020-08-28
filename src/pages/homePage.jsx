@@ -1,4 +1,4 @@
-import React, { useContext,  useState, useEffect } from "react";
+import React from "react";
 import PageTemplate from '../components/search'
 import StubAPI from "../api/stubAPI";
 import SearchButton from '../components/buttons/addSearch'
