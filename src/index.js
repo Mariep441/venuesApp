@@ -35,7 +35,7 @@ const HasAccessToRouter = () => {
       {...config}
       onAuthRequired={customAuthHandler}
     >
-      <Navbar />
+      
       <Container text style={{ marginTop: '2em' }}>
         <Route path="/" exact component={Home} />
         <Route path="/implicit/callback" component={LoginCallback} />
@@ -60,6 +60,7 @@ const HasAccessToRouter = () => {
                     </div>
             </div>
       </Container>
+      <Navbar />
     </Security>
   );
 };

@@ -7,6 +7,7 @@ const FavoriteVenuesPage = props => {
   const context = useContext(VenuesContext);
   return (
     <VenueListPageTemplate
+      name='Favorites'
       venues={context.favorites}
       title={"Favorite Venues"}
       action={venue => <AddTipButton venue={venue} />}

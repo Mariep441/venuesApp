@@ -15,14 +15,22 @@ const Navbar = () => {
           <Menu.Item as="a" header href="/">
 
             &nbsp;
-            Okta-React Sample Project
+
+
           </Menu.Item>
-          {authState.isAuthenticated && <Menu.Item id="profile-button" as="a" href="/profile">Profile</Menu.Item>}
-          {authState.isAuthenticated && <Menu.Item id="logout-button" as="a" onClick={logout}>Logout</Menu.Item>}
-          {!authState.isPending && !authState.isAuthenticated && <Menu.Item as="a" onClick={login}>Login</Menu.Item>}
+
+          <nav className="navbar  navbar-light fixed-bottom  bg-dark ">
+
+          <ul>{authState.isAuthenticated && <Menu.Item id="profile-button" as="a" href="/profile">Profile</Menu.Item>}</ul>
+          <ul>{authState.isAuthenticated && <Menu.Item id="logout-button" as="a" onClick={logout}>Logout</Menu.Item>}
+          {!authState.isPending && !authState.isAuthenticated && <Menu.Item as="a" onClick={login}>Login</Menu.Item>}</ul>
+        
+          </nav>
         </Container>
       </Menu>
     </div>
   );
 };
+
+
 export default Navbar;
