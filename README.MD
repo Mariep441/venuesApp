@@ -7,15 +7,15 @@ This is an app based on the Movies app with a twist; It has been refactor to use
 
 List of new features
  
- + Different Home Page with user inputs to modify the Search
- + Various Changes into the List of Venues to integrate the new data points
+ + Various Changes into the Venues to integrate the new data points
  + Venues Details with the best photo of each venue
  + Show latest tip
  + Leaflet Map with PopUp to visualise each venues
+ + Authentication by Okta
 
 ## Setup requirements.
 
-...... Insert a brief explanation (to a third party) of any non-standard setup steps necessary to run your app/client locally (after cloning the repo) ........
+All the credentials, keys, passwords and username will be submitted on Moodle.
 
 ## API Data Model.
 
@@ -72,13 +72,14 @@ Get a Venue’s Tips:     GET	venues	tips
 
 ## Independent learning.
 
-. . . . . Briefly state the technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include source material references (articles/blogs) ......... 
-
+Okta Authentication:
 https://dev.to/vic3king/building-a-spa-with-react-and-okta-for-authentication-4m85
 
+
+Leaflet Map with React:
 https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef4ecbdcc1b
 
 
-[model]: ./data.jpg
+[model]: ./model.jpg
 [image]: ./images/travel.png
 [stories]: ./storybook.png

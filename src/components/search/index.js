@@ -19,10 +19,10 @@ const Search = () => {
 
 
   return (
+
     <div className="header-form-input-col">
-    
     <div className="image">
-      <img src={require('../../images/travel.png')} height="700" width="1200" />
+      <img src={require('../../images/travel.png')} height="500" width="1000" />
     </div>
 
     <div className="header-form-input-col">

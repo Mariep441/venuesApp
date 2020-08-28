@@ -29,7 +29,7 @@ const VenueListPageTemplate = ({venues, name, action}) => {
       <VenueList
         action={action}
         venues={displayedVenues}
-      ></VenueList>
+     ></VenueList>
     </>
   );
 };
