@@ -57,7 +57,7 @@ I have created stories for:
 
 ...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
 
-![][homePage]
+![][homePage](./HomePage.png)
 >Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
 
 ### Routing.
