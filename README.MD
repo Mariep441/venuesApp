@@ -25,10 +25,10 @@ https://developer.foursquare.com/docs/places-api/endpoints/
 
 In the stories => index, there are sample of the data return from the queries.
 
-Search for Venues :     GET	venues	search
-Get Venue Categories:   GET	venues	categories
-Get Details of a Venue: GET	venues	details
-Get a Venue’s Tips:     GET	venues	tips
++ Search for Venues :     GET	venues	search
++ Get Venue Categories:   GET	venues	categories
++ Get Details of a Venue: GET	venues	details
++ Get a Venue’s Tips:     GET	venues	tips
 
 ![][model]
 
@@ -80,6 +80,6 @@ Leaflet Map with React:
 https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef4ecbdcc1b
 
 
-[model]: ./model.jpg
+[model]: ../public/model.jpg
 [image]: ./images/travel.png
 [stories]: ./storybook.png
