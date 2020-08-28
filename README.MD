@@ -23,8 +23,6 @@ All the documentation of the endpoints use in this project are described in the 
 
 https://developer.foursquare.com/docs/places-api/endpoints/
 
-In the stories => index, there are sample of the data return from the queries.
-
 + Search for Venues :     GET	venues	search
 + Get Venue Categories:   GET	venues	categories
 + Get Details of a Venue: GET	venues	details
@@ -51,7 +49,7 @@ I have created stories for:
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
-![][stories] (./storybook.PNG)
+![][stories]
 
 ### UI Design.
 
@@ -59,33 +57,40 @@ I have created stories for:
 ![][Login]
 >Login Page powered by Okta. There is still work to do on the application header and what is visible at this point
 
-
 ![][homePage]
 >Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
 
 ![][ListPage]
->Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+>List of all the Venues in the Search, The filter for the name is working well. However the filter for the sub-categories is still a work in progress. The Add to Favorite button is working well as expected.
 
 ![][MapPage]
->Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+>Map page with the venues represented on the Map. Popup with icon. Link on name with redirection to the Venue Detail.
 
 ![][VenueDetails]
->Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+>Venue Details with best picture displayed. The latest tip showing if wanted.
 
 
 ### Routing.
 
-...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
+The Route toward the Okta Login Widget
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id (private) - detail view of a particular blog.
-+ /blogs/:id/comments (private) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
++ <Route path="/" exact component={Home} />
++ <Route path="/implicit/callback" component={LoginCallback} />
++ <Route path="/login" exact component={CustomLoginComponent} />
+
+The secureRoute after the Okta Authentication:
+
++ <SecureRoute exact path="/tips/form" component={AddVenueTipPage} />   
++ <SecureRoute path="/tips/:id" component={VenueTipPage} /> 
++ <SecureRoute exact path="/venues/favorites" component={FavoriteVenuesPage} />
++ <SecureRoute path="/venues/:id" component={VenuePage} />
++ <SecureRoute path="/mapView" component={MapPage} />
++ <SecureRoute path="/list" component={ListPage} />
++ <SecureRoute path="/home" component={HomePage} />
+
 
 ## React feature set.
 
-..... Insert a bullet-point list of the React features used in your project, including one source code file references for each - see examples below ......
 
 + useState and useEffect hooks - src/components/fileA.js
 + useContext hook - src/components/fileb.js
