@@ -129,8 +129,8 @@ const sampleTip = {
       state: "District de Luxembourg",
       country: "Luxembourg",
       formattedAddress: [
-        Esch-sur-Alzette,
-        Luxembourg
+        "Esch-sur-Alzette",
+        "Luxembourg"
         ]
       },
       canonicalUrl: "https://foursquare.com/v/d%C3%A9irepark/50913b74e4b0d49482a598b7",
@@ -329,9 +329,6 @@ const sampleTip = {
       algoVersion: 3
       }
   }
-
-
-
 
 
 storiesOf("Home Page/VenueCard", module)
