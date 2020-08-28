@@ -80,6 +80,6 @@ Leaflet Map with React:
 https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef4ecbdcc1b
 
 
-[model]: ../public/model.png
+[model]: ./model.png
 [image]: ./images/travel.png
 [stories]: ./storybook.png

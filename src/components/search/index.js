@@ -1,6 +1,4 @@
 import React, { useContext, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../globals/fontawesome";
 import "./search.css";
 import "../../images/travel.png";
 import { CategoriesContext } from '../../contexts/categoriesContext';
