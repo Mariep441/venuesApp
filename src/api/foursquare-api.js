@@ -1,16 +1,7 @@
-import React, { useContext } from "react";
-import { CategoriesContext } from '../contexts/categoriesContext';
-import StubAPI from "../api/stubAPI";
- 
- let test=StubAPI.getCategory();
- console.log(test);
-
 let categoryId = "4d4b7104d754a06370d81259";
-
 let location = "Luxembourg,LU";
 
 
- 
  export const getVenues = () => {
     return fetch(
       `https://api.foursquare.com/v2/venues/search?near=${location}&categoryId=${categoryId}&client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}&v=20190101`
@@ -53,6 +44,8 @@ let location = "Luxembourg,LU";
       .then(data => data.response.categories[0].categories) 
   };
 
+
+  
 
   export const getVenueTips = id => {
     return fetch(

@@ -49,10 +49,9 @@ I have created stories for:
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
-![][stories]
+![][storybook]
 
 ### UI Design.
-
 
 ![][Login]
 >Login Page powered by Okta. There is still work to do on the application header and what is visible at this point
@@ -74,31 +73,29 @@ I have created stories for:
 
 The Route toward the Okta Login Widget
 
-+ <Route path="/" exact component={Home} />
-+ <Route path="/implicit/callback" component={LoginCallback} />
-+ <Route path="/login" exact component={CustomLoginComponent} />
+ + Route path="/" exact component={Home} /
+ + Route path="/implicit/callback" component={LoginCallback} /
+ + Route path="/login" exact component={CustomLoginComponent} /
 
 The secureRoute after the Okta Authentication:
 
-+ <SecureRoute exact path="/tips/form" component={AddVenueTipPage} />   
-+ <SecureRoute path="/tips/:id" component={VenueTipPage} /> 
-+ <SecureRoute exact path="/venues/favorites" component={FavoriteVenuesPage} />
-+ <SecureRoute path="/venues/:id" component={VenuePage} />
-+ <SecureRoute path="/mapView" component={MapPage} />
-+ <SecureRoute path="/list" component={ListPage} />
-+ <SecureRoute path="/home" component={HomePage} />
+ + SecureRoute exact path="/tips/form" component={AddVenueTipPage} /
+ + SecureRoute path="/tips/:id" component={VenueTipPage} /
+ + SecureRoute exact path="/venues/favorites" component={FavoriteVenuesPage} /
+ + SecureRoute path="/venues/:id" component={VenuePage} /
+ + SecureRoute path="/mapView" component={MapPage} /
+ + SecureRoute path="/list" component={ListPage} /
+ + SecureRoute path="/home" component={HomePage} /
 
 
 ## React feature set.
 
++ useState and useEffect hooks - src/components/templateVenueListPage.js
++ useContext hook - src/components/tipForm.js
++ Extended Link - src/components/templateVenuePage.js
++ Programmatic navigation - src/pages/VenueDetailsPage.js
++ jsx - src/components/okta/Profile.jsx
 
-+ useState and useEffect hooks - src/components/fileA.js
-+ useContext hook - src/components/fileb.js
-+ Extended Link - src/components/fileA.js
-+ Programmatic navigation - src/pages/fileC.js
-+ etc
-+ etc
-+ etc
 
 ## Independent learning.
 
@@ -112,7 +109,7 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 [model]: ./model.PNG
 [stories]: ./storybook.PNG
-[Login]: ./Login.PNG
+[storybook]: ./Login.PNG
 [homePage]: ./HomePage.PNG
 [ListPage]: ./ListPage.PNG
 [MapPage]: ./MapPage.PNG

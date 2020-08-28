@@ -1,6 +1,6 @@
 import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
-import { Container, Image, Menu } from 'semantic-ui-react';
+import { Container, Menu } from 'semantic-ui-react';
 
 
 const Navbar = () => {
