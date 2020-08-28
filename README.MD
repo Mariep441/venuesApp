@@ -94,4 +94,4 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 [model]: ./model.PNG
 [stories]: ./storybook.PNG
-[stories]: ./HomePage.PNG
+[homePage]: ./HomePage.PNG
