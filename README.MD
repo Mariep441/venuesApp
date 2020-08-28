@@ -57,11 +57,20 @@ I have created stories for:
 
 
 ![][Login]
->Login Page powered by Okta.
+>Login Page powered by Okta. There is still work to do on the application header and what is visible at this point
+
 
 ![][homePage]
 >Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
 
+![][ListPage]
+>Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+
+![][MapPage]
+>Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
+
+![][VenueDetails]
+>Home Page of the application. Ideally, this would let the user chose a location from assets/data and also a Category to do the Search. At this point, it is unfortunately still static.
 
 
 ### Routing.
@@ -100,3 +109,6 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 [stories]: ./storybook.PNG
 [Login]: ./Login.PNG
 [homePage]: ./HomePage.PNG
+[ListPage]: ./ListPage.PNG
+[MapPage]: ./MapPage.PNG
+[VenueDetails]: ./VenueDetails.PNG
