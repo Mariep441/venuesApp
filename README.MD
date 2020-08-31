@@ -49,7 +49,6 @@ I have created stories for:
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
-
 ![][Storybook]
 
 
