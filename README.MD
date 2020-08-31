@@ -40,6 +40,7 @@ In the stories => index, there are sample of the data return from the queries.
 + sampleTip
 + sampleDetailVenue
 
+![][Storybook]
 I have created stories for:
 + storiesOf("Home Page/VenueCard", module)
 + storiesOf("Home Page/FilterControls", module)
@@ -49,7 +50,6 @@ I have created stories for:
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
-![][Storybook]
 
 ### UI Design.
 
