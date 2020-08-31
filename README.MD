@@ -40,8 +40,7 @@ In the stories => index, there are sample of the data return from the queries.
 + sampleTip
 + sampleDetailVenue
 
-![][Storybook]
->I have created stories for:
+I have created stories for:
 + storiesOf("Home Page/VenueCard", module)
 + storiesOf("Home Page/FilterControls", module)
 + storiesOf("Home Page/Header", module)
@@ -50,6 +49,8 @@ In the stories => index, there are sample of the data return from the queries.
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
+
+![][storybook]
 
 ### UI Design.
 
@@ -108,7 +109,7 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 
 [model]: ./model.PNG
-[Storybook]: ./Storybook.PNG
+[storybook]: ./storybook.PNG
 [Login]: ./Login.PNG
 [homePage]: ./HomePage.PNG
 [ListPage]: ./ListPage.PNG
