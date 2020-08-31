@@ -109,7 +109,7 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 
 [model]: ./model.PNG
-[Example]: ./Example.PNG
+[Example]: ./Example.JPG
 [Login]: ./Login.PNG
 [homePage]: ./HomePage.PNG
 [ListPage]: ./ListPage.PNG
