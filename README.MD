@@ -41,7 +41,7 @@ In the stories => index, there are sample of the data return from the queries.
 + sampleDetailVenue
 
 ![][Storybook]
-I have created stories for:
+>I have created stories for:
 + storiesOf("Home Page/VenueCard", module)
 + storiesOf("Home Page/FilterControls", module)
 + storiesOf("Home Page/Header", module)
