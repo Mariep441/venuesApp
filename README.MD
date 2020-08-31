@@ -49,7 +49,7 @@ I have created stories for:
 + storiesOf("Venue Details Page/VenueHeader", module)
 + storiesOf("Venue Tip Page/VenueTip", module)
 
-![][Storybook]
+![][Storybook1]
 
 
 ### UI Design.
@@ -109,7 +109,7 @@ https://medium.com/javascript-in-plain-english/leaflet-map-with-react-part-i-4ef
 
 
 [model]: ./model.PNG
-[Storybook]: ./Storybook.PNG
+[Storybook1]: ./Storybook1.PNG
 [Login]: ./Login.PNG
 [homePage]: ./HomePage.PNG
 [ListPage]: ./ListPage.PNG
