@@ -50,7 +50,7 @@ I have created stories for:
 + storiesOf("Venue Tip Page/VenueTip", module)
 
 
-![][Storybook] (./Storybook.PNG)
+![][Storybook]
 >Storybook
 
 ### UI Design.
